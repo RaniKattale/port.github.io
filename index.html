@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Basic styles */
+        body {
+            background-color: #f4f4f4;
+            padding-bottom: 100px; /* To create space for the next button at the bottom */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            float: right;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 48px;
+            animation-name:ani ;
+            animation-duration: 5s;
+            animation-iteration-count: one;
+            position: relative;
+        
+        }
+       
+        @keyframes ani{
+            from{color: seagreen;}
+            to{color: antiquewhite;}
+        }
+/* Apply animation to the portfolio heading */
+#portfolio-heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 48px;
+    animation-name: ani ;
+     animation-duration: 3s;
+     animation-iteration-count: one;
+     
+    
+}
+
+/* Apply animation to the welcome heading */
+#welcome-heading {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 48px;
+    animation: moveFromRight 2s ease forwards;
+}
+@keyframes moveFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+
+/* Apply animation to the get started link */
+#get-started-link {
+    text-decoration: none;
+
+    display: inline-block;
+    margin: 50px auto;
+    padding: 15px 40px;
+    color: #fff;
+    background-color: skyblue;
+    border-radius: 8px;
+    font-size: 20px;
+    animation: moveFromLeft 2s ease forwards;
+}
+
+#get-started-link:hover {
+    background-color: #555;
+}
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: brown;
+        }
+
+        #p1 {
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 40px;
+            color: #fff;
+            background-color: #333;
+            border-radius: 8px;
+            font-size: 20px;
+            animation: moveFromLeft 2s ease forwards;
+        }
+
+        #p1:hover {
+            background-color: #555;
+        }
+
+        /* Keyframes for animation */
+        @keyframes moveFromLeft {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+
+        /* Next Button */
+        #next-button {
+            position: fixed; /* Fixed positioning */
+            bottom: 20px; /* 20px from the bottom */
+            right: 20px; /* 20px from the right */
+            padding: 15px 40px; /* Larger padding for a bigger button */
+            background-color: #0E46A3;
+            color: #fff;
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #next-button:hover {
+            background-color: #0E46A3;
+        }
+
+        /* Navigation and Button Styles */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color:#0E46A3 ; 
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        a:hover {
+            border-color: #333;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header nav ul {
+                float: none;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header nav ul li a {
+                display: block;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 id="portfolio-heading">PORTFOLIO</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="cetificate.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div>
+        <h1 id="welcome-heading">WELCOME TO MY PORTFOLIO</h1>
+    </div>
+    <p>
+        <a id="p1" href="getstarted.html">GET STARTED</a>
+    </p>
+
+    <!-- Next Page Button -->
+    <button id="next-button" onclick="window.location.href='getstarted.html';">Next Page</button>
+
+</body>
+</html>
